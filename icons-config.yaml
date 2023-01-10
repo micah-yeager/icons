@@ -1,0 +1,87 @@
+sources:
+  - type: folder
+    path: .
+    format: png
+    outputs:
+      - format: png
+        directory-override: general
+        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        color: '#ffffff'
+        background: '#000000'
+        margin: '18%'
+  - type: url
+    path: 'https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-web.zip'
+    format: svg
+    recurse: false
+    target-folders:
+      - svgs/brands
+      - svgs/solid
+    outputs:
+      - format: png
+        directory-override: general
+        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        color: '#ffffff'
+        background: '#000000'
+        margin: '18%'
+        selectors:
+          - apple
+          - broom
+          - calendar-days
+          - certificate
+          - circle-xmark
+          - clock
+          - cloud
+          - cloud-arrow-up
+          - cloudflare
+          - comments
+          - computer
+          - database
+          - download
+          - dumpster-fire
+          - ellipsis
+          - eye
+          - file-signature
+          - film
+          - gauge-high
+          - gitlab
+          - globe
+          - image
+          - key
+          - layer-group
+          - list
+          - list-check
+          - list-ol
+          - lock
+          - mobile
+          - paper-plane
+          - plane-departure
+          - rotate
+          - scroll
+          - server
+          - terminal
+          - unlock
+          - user-gear
+          - user-minus
+          - user-xmark
+          - users
+          - windows
+      - format: png
+        directory-override: production
+        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        color: '#ffffff'
+        background: '#A32035'
+        margin: '18%'
+        selectors:
+          - circle-exclamation
+          - gauge-high
+          - globe
+          - list-check
+#  - type: file
+#    path: svgs/example.svg
+#    format: svg
+#  - type: folder
+#    path: pngs/
+#    format: png
+#    recurse: true
+#    target-folders:
+#      - transparent

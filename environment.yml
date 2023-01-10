@@ -1,0 +1,15 @@
+name: icons
+channels:
+  - conda-forge
+  # We want to have a reproducible setup, so we don't want default channels,
+  # which may be different for different users. All required channels should
+  # be listed explicitly here.
+  - nodefaults
+dependencies:
+  - python=3.10.*
+  - conda-lock
+  - mamba
+  - pip
+  - poetry=1.*
+  - # define cairosvg here instead of pyproject, so we also get pre-packaged binaries
+  - cairosvg=2.5.*
