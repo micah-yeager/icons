@@ -46,6 +46,7 @@ sources:
         background: '#A32035'
         selectors:
           - cisco
+          - coda-footprint
           - duo
           - it-glue
   # svg
@@ -153,4 +154,5 @@ sources:
           - circle-exclamation
           - gauge-high
           - globe
+          - infinity
           - list-check
