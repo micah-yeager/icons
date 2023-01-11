@@ -57,18 +57,25 @@ register_input = partial(register, provider=input_provider)
 
 @register_input('png', 'jpg', 'jpeg')
 class StandardInput(BaseLossyInput):
+    def __init__(self, **kwargs):
+        self._cached_colorized_image = None
+        super().__init__(**kwargs)
+
     def ingest(self, color: str):
-        # create io.BytesIO object from the new byte string, then pass it to Pillow
-        img = Image.open(io.BytesIO(self.byte_string))
+        # add a colored image cache since ingest() can be called multiple times
+        # without any change in output
+        if self._cached_colorized_image is None:
+            # create io.BytesIO object from the new byte string, then pass it to Pillow
+            img = Image.open(io.BytesIO(self.byte_string))
 
-        # convert to RGBA if not already
-        if img.mode != 'RGBA':
-            img = img.convert('RGBA')
+            # convert to RGBA if not already, then colorize
+            if img.mode != 'RGBA':
+                img = img.convert('RGBA')
+            self._change_color(img, from_color='#000000', to_color=color)
 
-        # change the foreground color
-        self._change_color(img, from_color='#000000', to_color=color)
+            self._cached_colorized_image = img
 
-        return img
+        return self._cached_colorized_image
 
     @staticmethod
     def _change_color(img: Image, from_color, to_color, delta_rank=10):
