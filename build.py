@@ -10,7 +10,7 @@ LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(logging.WARNING)
 # set up console logging
 logging.basicConfig(
-    format='%(asctime)s %(name)s %(levelname)s - %(message)s',
+    format='%(levelname)s: %(message)s',
     level=logging.DEBUG,
 )
 
