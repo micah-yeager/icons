@@ -48,6 +48,7 @@ sources:
           - broom
           - calendar-days
           - certificate
+          - circle-exclamation
           - circle-xmark
           - clock
           - cloud
@@ -56,6 +57,7 @@ sources:
           - comments
           - computer
           - database
+          - diagram-project
           - download
           - dumpster-fire
           - ellipsis
@@ -66,12 +68,14 @@ sources:
           - gitlab
           - globe
           - image
+          - infinity
           - key
           - layer-group
           - list
           - list-check
           - list-ol
           - lock
+          - microsoft
           - mobile
           - paper-plane
           - plane-departure
@@ -80,10 +84,15 @@ sources:
           - server
           - terminal
           - unlock
+          - user
           - user-gear
+          - user-group
           - user-minus
+          - user-slash
           - user-xmark
           - users
+          - users-gear
+          - users-slash
           - windows
       - format: png
         directory-override: production
