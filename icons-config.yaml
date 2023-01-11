@@ -5,7 +5,7 @@ sources:
     outputs:
       - format: png
         directory-override: general
-        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        sizes: [ 512 ]
         color: '#ffffff'
         background: '#000000'
         margin: '18%'
@@ -19,7 +19,7 @@ sources:
     outputs:
       - format: png
         directory-override: general
-        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        sizes: [ 512 ]
         color: '#ffffff'
         background: '#000000'
         margin: '18%'
