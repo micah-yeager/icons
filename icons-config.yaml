@@ -9,6 +9,16 @@ sources:
         color: '#ffffff'
         background: '#000000'
         margin: '18%'
+      - format: png
+        directory-override: production
+        sizes: [ 512 ]
+        color: '#ffffff'
+        background: '#A32035'
+        margin: '18%'
+        selectors:
+          - cisco
+          - duo
+          - it-glue
   - type: folder
     path: svg
     format: svg
