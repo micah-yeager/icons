@@ -1,7 +1,17 @@
 sources:
   - type: folder
-    path: .
+    path: png
     format: png
+    outputs:
+      - format: png
+        directory-override: general
+        sizes: [ 512 ]
+        color: '#ffffff'
+        background: '#000000'
+        margin: '18%'
+  - type: folder
+    path: svg
+    format: svg
     outputs:
       - format: png
         directory-override: general
