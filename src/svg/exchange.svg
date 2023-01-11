@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 58.8 55.5"
+   version="1.1"
+   sodipodi:docname="exchange.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview60"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="21.114537"
+     inkscape:cx="21.454414"
+     inkscape:cy="46.95817"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs37">
+    <style
+       id="style32">.cls-1,.cls-4{fill:none;}.cls-2{fill:#0078d7;}.cls-3{clip-path:url(#clip-path);}.cls-4{stroke:#0078d7;stroke-miterlimit:10;stroke-width:2px;}</style>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath403">
+      <g
+         id="g407">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect405"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath409">
+      <g
+         id="g413">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect411"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath415">
+      <g
+         id="g419">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect417"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath421">
+      <g
+         id="g425">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect423"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath427">
+      <g
+         id="g431">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect429"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath433">
+      <g
+         id="g437">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect435"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath439">
+      <g
+         id="g443">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect441"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath445">
+      <g
+         id="g449">
+        <rect
+           class="cls-1"
+           width="96"
+           height="96"
+           id="rect447"
+           x="0"
+           y="0" />
+      </g>
+    </clipPath>
+  </defs>
+  <path
+     class="cls-2"
+     d="M19.78,25.74V70.26l32.59,5.49V20.25ZM40.45,59.13l-9.52-.78,0-21.05,8.74-.43v4L34.09,41v4.81l5.56.07v4l-5.56-.11v4.8l6.36.41Z"
+     transform="translate(-19.78 -20.25)"
+     id="path39"
+     style="fill:#000000" />
+  <rect
+     class="cls-4"
+     x="25.73"
+     y="10"
+     width="32.07"
+     height="35.950001"
+     rx="1.6799999"
+     id="rect41"
+     clip-path="url(#clipPath445)"
+     style="stroke:#000000;stroke-opacity:1" />
+  <path
+     class="cls-2"
+     d="m 34.97,29.44 -0.75,-0.47 v -3 l 3.71,4 c 0.08,0 0,0.25 0,0.29 l -0.3,0.3 c -0.06,0 -0.21,0.16 -0.29,0.15 C 37.26,30.7 35.96,30 35.01,29.44"
+     id="path43"
+     clip-path="url(#clipPath439)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 34.22,19 v -4 h 0.8 a 1,1 0 0 1 0.84,0.37 l 2.73,2.56 a 0.48,0.48 0 0 1 0,0.45 l -1.17,1.66 a 1,1 0 0 1 -0.81,0 l -1.19,-1.08 a 6,6 0 0 0 -1.2,0"
+     id="path45"
+     clip-path="url(#clipPath433)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 41.45,32.53 a 54,54 0 0 1 -4.68,6.48 c -0.83,1 -1.23,1.46 -1.79,1.46 h -0.76 v -4 h 0.4 C 35.34,35.84 42,29.58 42,29.58 c 0,0 0.27,-0.05 0.31,0 l 0.29,0.3 c 0,0.06 0.17,0.21 0.14,0.29 -0.03,0.08 -0.7,1.39 -1.25,2.34"
+     id="path47"
+     clip-path="url(#clipPath427)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 38.05,22.97 a 53.93,53.93 0 0 1 4.67,-6.48 c 0.83,-1 1.23,-1.46 1.8,-1.46 h 6.85 a 1.2,1.2 0 0 1 1.09,1.09 v 6.9 a 0.93,0.93 0 0 1 -0.37,0.79 l -2.57,2.75 a 0.52,0.52 0 0 1 -0.44,0 l -1.66,-1.17 a 1.11,1.11 0 0 1 0,-0.82 l 1.08,-1.19 a 5.91,5.91 0 0 0 0,-1.19 V 19.8 a 0.77,0.77 0 0 0 -0.79,-0.79 h -2.8 c -0.72,0.63 -7.38,6.89 -7.38,6.89 0,0 -0.26,0.05 -0.3,0 l -0.3,-0.3 c 0,-0.06 -0.16,-0.21 -0.14,-0.29 0.02,-0.08 0.71,-1.39 1.26,-2.34"
+     id="path49"
+     clip-path="url(#clipPath421)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 52.47,32.51 v 6.86 a 1.2,1.2 0 0 1 -1.09,1.09 h -6.86 a 1.08,1.08 0 0 1 -0.85,-0.37 c -0.2,-0.2 -2.72,-2.56 -2.72,-2.56 a 0.48,0.48 0 0 1 0,-0.45 l 1.17,-1.66 a 1,1 0 0 1 0.81,0 l 1.19,1.08 a 5.91,5.91 0 0 0 1.19,0 h 2.39 a 0.77,0.77 0 0 0 0.79,-0.79 v -2.79 c -0.63,-0.72 -6.88,-7.39 -6.88,-7.39 0,0 0,-0.25 0,-0.29 l 0.29,-0.3 c 0.06,0 0.22,-0.16 0.3,-0.15 0.08,0.01 1.38,0.71 2.32,1.27 a 53.21,53.21 0 0 1 6.49,4.69 c 1,0.84 1.46,1.22 1.46,1.79"
+     id="path51"
+     clip-path="url(#clipPath415)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 41.45,32.53 a 53.93,53.93 0 0 1 -4.67,6.48 c -0.83,1 -1.23,1.46 -1.8,1.46 h -6.85 a 1.2,1.2 0 0 1 -1.09,-1.09 v -6.9 a 0.93,0.93 0 0 1 0.37,-0.79 l 2.57,-2.74 a 0.52,0.52 0 0 1 0.44,0 l 1.66,1.17 a 1.11,1.11 0 0 1 0,0.82 L 31,32.13 a 5.91,5.91 0 0 0 0,1.19 v 2.43 a 0.77,0.77 0 0 0 0.79,0.79 h 2.79 c 0.72,-0.63 7.38,-6.89 7.38,-6.89 0,0 0.26,-0.05 0.3,0 l 0.3,0.3 c 0,0.06 0.16,0.21 0.14,0.29 -0.02,0.08 -0.71,1.39 -1.26,2.34"
+     id="path53"
+     clip-path="url(#clipPath409)"
+     style="fill:#000000" />
+  <path
+     class="cls-2"
+     d="m 27.03,22.99 v -6.86 a 1.2,1.2 0 0 1 1.09,-1.09 h 6.85 a 1.08,1.08 0 0 1 0.85,0.37 c 0.2,0.2 2.72,2.56 2.72,2.56 a 0.48,0.48 0 0 1 0,0.45 l -1.17,1.66 a 1,1 0 0 1 -0.81,0 L 35.37,19 a 5.91,5.91 0 0 0 -1.19,0 H 31.8 a 0.77,0.77 0 0 0 -0.79,0.79 v 2.78 c 0.63,0.72 6.88,7.39 6.88,7.39 0,0 0,0.25 0,0.29 l -0.29,0.3 c -0.06,0 -0.22,0.16 -0.3,0.15 -0.08,-0.01 -1.38,-0.71 -2.32,-1.27 a 53.21,53.21 0 0 1 -6.49,-4.68 c -1,-0.84 -1.46,-1.22 -1.46,-1.79"
+     id="path55"
+     clip-path="url(#clipPath403)"
+     style="fill:#000000" />
+</svg>

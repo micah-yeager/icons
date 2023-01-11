@@ -17,12 +17,30 @@ output-defaults:
   background: '#000000'
   margin: '18%'
 sources:
+  # png
   - type: folder
     path: png
     format: png
     outputs:
       # general
       - directory-override: general
+      # groups
+      - directory-override: group
+        background: '#58595b'
+        selectors:
+          - exchange
+          - vmware
+      # groups - overrides for specific icons due to their size
+      - directory-override: group
+        sizes: [ 128 ]
+        background: '#58595b'
+        selectors:
+          - ekm-insight
+      - directory-override: group
+        sizes: [ 256 ]
+        background: '#58595b'
+        selectors:
+          - datto-rmm
       # production apps
       - directory-override: production
         background: '#A32035'
@@ -30,11 +48,20 @@ sources:
           - cisco
           - duo
           - it-glue
+  # svg
   - type: folder
     path: svg
     format: svg
     outputs:
+      # general
       - directory-override: general
+      # group
+      - directory-override: group
+        background: '#58595b'
+        selectors:
+          - exchange
+          - malwarebytes
+  # download - fontawesome
   - type: url
     path: 'https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-web.zip'
     format: svg
@@ -69,14 +96,12 @@ sources:
           - gitlab
           - globe
           - image
-          - infinity
           - key
           - layer-group
           - list
           - list-check
           - list-ol
           - lock
-          - microsoft
           - mobile
           - paper-plane
           - plane-departure
@@ -94,6 +119,24 @@ sources:
           - users
           - users-gear
           - users-slash
+      # groups
+      - directory-override: group
+        background: '#58595b'
+        selectors:
+          - circle-play
+          - comments
+          - copy
+          - cubes
+          - database
+          - ellipsis
+          - file-invoice-dollar
+          - house-laptop
+          - microsoft
+          - network-wired
+          - plug
+          - python
+          - scroll
+          - users-gear
           - windows
       # production apps
       - directory-override: production
