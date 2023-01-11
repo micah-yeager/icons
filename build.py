@@ -23,23 +23,38 @@ def main(enable_multiprocessing=True):
     with open('icons-config.yaml', 'r') as f:
         icon_config = yaml.safe_load(f)
 
-    for config in icon_config['sources']:
-        LOGGER.debug('Processing source config: %s', config)
-        source = source_provider.get(config)
+    for source_config in icon_config['sources']:
+        # combine the default config with the source config
+        defaulted_source_config = icon_config['source-defaults'] | source_config
+        LOGGER.debug('Processing source config: %s', defaulted_source_config)
+        source = source_provider.get(defaulted_source_config)
 
         # use multiprocessing to speed up generation
         if enable_multiprocessing:
             with multiprocessing.Pool() as pool:
                 pool.starmap(
                     process_input,
-                    ((config, source, image_path) for image_path in source.get()),
+                    (
+                        (
+                            defaulted_source_config,
+                            source,
+                            image_path,
+                            icon_config['output-defaults'],
+                        )
+                        for image_path in source.get()
+                    ),
                 )
         else:
             for image_path in source.get():
-                process_input(config, source, image_path)
+                process_input(
+                    defaulted_source_config,
+                    source,
+                    image_path,
+                    icon_config['output-defaults'],
+                )
 
 
-def process_input(config, source, image_path):
+def process_input(defaulted_source_config, source, image_path, output_config_defaults):
     LOGGER.debug('Found %s image: %s', source.format, image_path)
 
     # pass input as a dict since that's what the builder expects
@@ -47,9 +62,11 @@ def process_input(config, source, image_path):
         {'path': image_path, 'source': source, 'format': source.format}
     )
 
-    for output_config in config['outputs']:
+    for output_config in defaulted_source_config['outputs']:
+        defaulted_output_config = output_config_defaults | output_config
+
         # skip output if image not specified by any selectors
-        selectors = output_config.get('selectors')
+        selectors = defaulted_output_config.get('selectors')
         if (
             selectors
             and selectors != '*'
@@ -57,13 +74,13 @@ def process_input(config, source, image_path):
         ):
             LOGGER.debug(
                 'Skipping output %s for %s since it is not in selectors',
-                output_config,
+                defaulted_output_config,
                 input_.path,
             )
             continue
 
-        LOGGER.debug('Applying output config: %s', output_config)
-        output = output_provider.get(output_config)
+        LOGGER.debug('Applying output config: %s', defaulted_output_config)
+        output = output_provider.get(defaulted_output_config)
 
         for target_size, core_size in output.generate_sizes():
             LOGGER.debug(

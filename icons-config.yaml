@@ -8,23 +8,24 @@
 #        color: '#ffffff'
 #        background: '#000000'
 #        margin: '18%'
+source-defaults:
+  recurse: false
+output-defaults:
+  format: png
+  sizes: [ 512 ]
+  color: '#ffffff'
+  background: '#000000'
+  margin: '18%'
 sources:
   - type: folder
     path: png
     format: png
     outputs:
-      - format: png
-        directory-override: general
-        sizes: [ 512 ]
-        color: '#ffffff'
-        background: '#000000'
-        margin: '18%'
-      - format: png
-        directory-override: production
-        sizes: [ 512 ]
-        color: '#ffffff'
+      # general
+      - directory-override: general
+      # production apps
+      - directory-override: production
         background: '#A32035'
-        margin: '18%'
         selectors:
           - cisco
           - duo
@@ -33,26 +34,16 @@ sources:
     path: svg
     format: svg
     outputs:
-      - format: png
-        directory-override: general
-        sizes: [ 512 ]
-        color: '#ffffff'
-        background: '#000000'
-        margin: '18%'
+      - directory-override: general
   - type: url
     path: 'https://use.fontawesome.com/releases/v6.2.1/fontawesome-free-6.2.1-web.zip'
     format: svg
-    recurse: false
     target-folders:
       - svgs/brands
       - svgs/solid
     outputs:
-      - format: png
-        directory-override: general
-        sizes: [ 512 ]
-        color: '#ffffff'
-        background: '#000000'
-        margin: '18%'
+      # general
+      - directory-override: general
         selectors:
           - apple
           - broom
@@ -104,12 +95,10 @@ sources:
           - users-gear
           - users-slash
           - windows
-      - format: png
-        directory-override: production
+      # production apps
+      - directory-override: production
         sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
-        color: '#ffffff'
         background: '#A32035'
-        margin: '18%'
         selectors:
           - circle-exclamation
           - gauge-high
