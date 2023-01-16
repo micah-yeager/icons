@@ -12,7 +12,7 @@ source-defaults:
   recurse: false
 output-defaults:
   format: png
-  sizes: [ 512 ]
+  sizes: [ 256 ]
   color: '#ffffff'
   background: '#000000'
   margin: '18%'
@@ -30,17 +30,13 @@ sources:
         selectors:
           - exchange
           - vmware
+          datto-rmm
       # groups - overrides for specific icons due to their size
       - directory-override: group
         sizes: [ 128 ]
         background: '#58595b'
         selectors:
           - ekm-insight
-      - directory-override: group
-        sizes: [ 256 ]
-        background: '#58595b'
-        selectors:
-          - datto-rmm
       # production apps
       - directory-override: production
         background: '#A32035'
