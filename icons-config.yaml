@@ -153,7 +153,7 @@ sources:
           - infinity
           - list-check
       - directory-override: production
-        sizes: [ 16, 24, 32, 48, 64, 96, 128, 256, 512 ]
+        sizes: [ 72, 96, 128, 144, 152, 192 ]
         background: '#A32035'
         selectors:
           - gauge-high
