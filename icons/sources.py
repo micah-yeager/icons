@@ -1,3 +1,4 @@
+import tempfile
 import zipfile
 from abc import abstractmethod
 from functools import partial
@@ -11,7 +12,6 @@ from .utils import register
 
 
 class BaseSource(Base):
-    base_path = Path(__file__).parent.parent / 'src'
     requires_fetching = False
 
     @abstractmethod
@@ -27,11 +27,7 @@ register_source = partial(register, provider=source_provider)
 class FileSource(BaseSource):
     def get(self):
         if self.path.suffix != self.format:
-            raise ValueError(
-                'Path {} does not have the correct extension for {}'.format(
-                    self.path, self.format
-                )
-            )
+            raise ValueError('Path {} does not have the correct extension for {}'.format(self.path, self.format))
 
         yield self.base_path / self.path
 
@@ -42,9 +38,7 @@ class FileSourceBuilder(BaseBuilder):
 
 @register_source('directory', 'folder')
 class DirectorySource(BaseSource):
-    def __init__(
-        self, recurse: bool = False, target_folders: list[str] = None, **kwargs
-    ):
+    def __init__(self, recurse: bool = False, target_folders: list[str] = None, **kwargs):
         super().__init__(**kwargs)
         self.recurse = recurse
 
@@ -68,7 +62,6 @@ class DirectorySource(BaseSource):
 
 @register_source('url')
 class UrlSource(DirectorySource, FileSource):
-    base_path = Path(__file__).parent.parent / 'build'
     requires_fetching = True
 
     def __init__(self, **kwargs):
@@ -77,6 +70,7 @@ class UrlSource(DirectorySource, FileSource):
         self.url_path = PurePosixPath(self.url)
         super().__init__(**kwargs)
         self.path = PurePath(self.url_path.name)
+        self.base_path = Path(tempfile.gettempdir())
 
     def get(self):
         # get the file, downloading it if necessary

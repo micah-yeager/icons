@@ -88,11 +88,7 @@ class StandardInput(BaseLossyInput):
                 r_delta = img_data[x, y][0] - from_color[0]
                 g_delta = img_data[x, y][0] - from_color[0]
                 b_delta = img_data[x, y][0] - from_color[0]
-                if (
-                    abs(r_delta) <= delta_rank
-                    and abs(g_delta) <= delta_rank
-                    and abs(b_delta) <= delta_rank
-                ):
+                if abs(r_delta) <= delta_rank and abs(g_delta) <= delta_rank and abs(b_delta) <= delta_rank:
                     img_data[x, y] = (
                         to_color[0] + r_delta,
                         to_color[1] + g_delta,
@@ -121,9 +117,7 @@ class SvgInput(BaseLosslessInput):
             kwargs['map_rgba'] = partial(specify_color, target_color=cairo_color(color))
 
         # specify output size to scale the vector as needed
-        new_byte_string = self.convert(
-            self.byte_string, output_width=size, output_height=size, **kwargs
-        )
+        new_byte_string = self.convert(self.byte_string, output_width=size, output_height=size, **kwargs)
         # create io.BytesIO object from the new byte string, then pass it to Pillow
         return Image.open(io.BytesIO(new_byte_string))
 

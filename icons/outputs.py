@@ -50,8 +50,6 @@ def get_core_image_size(target_size: int, margin: int | str) -> int:
 
 
 class BaseOutput(Base):
-    base_path = Path(__file__).parent.parent / 'dist'
-
     def __init__(
         self,
         sizes: list[int],
@@ -74,9 +72,7 @@ class BaseOutput(Base):
         for target_size in self.target_sizes:
             yield target_size, get_core_image_size(target_size, self.target_margin)
 
-    def generate(
-        self, img: Image, input: BaseInput, target_size: int, core_size: int
-    ) -> (Image, Path):
+    def generate(self, img: Image, input: BaseInput, target_size: int, core_size: int) -> (Image, Path):
         input_ = input
 
         dest_path = self._generate_path(input_, target_size)
@@ -116,23 +112,15 @@ class BaseOutput(Base):
         # the other side while keeping the aspect ratio
         if img.width != img.height:
             if img.width > img.height:
-                core_dimensions = (
-                    core_size,
-                    round(img.height * (core_size / img.width)),
-                )
+                core_dimensions = (core_size, round(img.height * (core_size / img.width)))
             else:
-                core_dimensions = (
-                    round(img.width * (core_size / img.height)),
-                    core_size,
-                )
+                core_dimensions = (round(img.width * (core_size / img.height)), core_size)
         else:
             core_dimensions = (core_size, core_size)
 
         # ensure that the core size is smaller than the img actual size
         if core_dimensions[0] > img.width or core_dimensions[1] > img.height:
-            raise ValueError(
-                'The target size cannot be larger than the original image size'
-            )
+            raise ValueError('The target size cannot be larger than the original image size')
 
         # resize the image to the core size using the Hamming filter since it
         # balances downscaling performance and quality
@@ -149,11 +137,7 @@ class BaseOutput(Base):
 
         # paste the img onto the background centered
         background_img.alpha_composite(
-            img,
-            (
-                (background_img.width - img.width) // 2,
-                (background_img.height - img.height) // 2,
-            ),
+            img, ((background_img.width - img.width) // 2, (background_img.height - img.height) // 2)
         )
         return background_img
 
