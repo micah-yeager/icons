@@ -30,7 +30,7 @@ sources:
         selectors:
           - exchange
           - vmware
-          datto-rmm
+          - datto-rmm
       # groups - overrides for specific icons due to their size
       - directory-override: group
         sizes: [ 128 ]

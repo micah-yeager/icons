@@ -10,6 +10,6 @@ dependencies:
   - conda-lock
   - mamba
   - pip
-  - poetry=1.*
+  - poetry=1.3.*
   - # define cairosvg here instead of pyproject, so we also get pre-packaged binaries
   - cairosvg=2.5.*
